@@ -16,8 +16,9 @@ jobs:
       - name: Build flexdecrypt
         run: ./Scripts/build.sh
 
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: Builds
-          path: ./*.deb
+          files: ./*.deb
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
