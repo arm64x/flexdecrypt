@@ -20,6 +20,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: ./*.deb
-          tag_name: v1.0.0
+          tag_name: Test
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
