@@ -13,5 +13,5 @@ pushd "$projectDirectory"
     mkdir -p "$binDirectory"
     cp ./derived-rootless/Build/Products/Release-iphoneos/flexdecrypt.app/flexdecrypt "$binDirectory/"
     find ./Package-rootless -name ".DS_Store" -depth -exec rm {} \;
-    dpkg-deb -b -Zgzip ./Package-rootless flexdecrypt-rootless.deb
+    dpkg-deb -b -Zgzip ./Package-rootless flexdecrypt_iphoneos-arm64.deb
 popd
