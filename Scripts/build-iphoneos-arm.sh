@@ -13,5 +13,5 @@ pushd "$projectDirectory"
     mkdir -p "$binDirectory"
     cp ./derived/Build/Products/Release-iphoneos/flexdecrypt.app/flexdecrypt "$binDirectory/"
     find ./Package -name ".DS_Store" -depth -exec rm {} \;
-    dpkg-deb -b -Zgzip ./Package flexdecrypt.deb
+    dpkg-deb -b -Zgzip ./Package flexdecrypt_iphoneos-arm.deb
 popd
